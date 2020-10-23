@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>The Jquery ajax 01 Page</h1>
+    <fieldset>
+        <legend>Jquery Ajax function</legend>
+        <button onclick="doGet()">$.get(...)</button>
+        <button onclick="doPost()">$.post(...)</button>
+        <button onclick="doAjax()">$.ajax(...)</button>
+        <button onclick="doLoad()">$.load(...)</button>
+        <button onclick="doAxios()">Axios(...)</button>
+
+        <span id="resultId"></span>
+    </fieldset>
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+<script type="text/javascript" src="/js/ajax.js"></script>
+<script type="text/javascript" src="/js/axios.min.js"></script>
+    <script type="text/javascript">
+    function doGet() {
+    var url="doAjaxGet";
+    var params = "msg=hello cgb2006";
+    Ajax.doAjaxGet(url,params,function(result){
+        $("#resultId").html(result);
+    });
+    }
+
+    function doPost(){
+        var url="doAjaxPost";
+        var params = "id=10&&name=hu";
+        Ajax.doAjaxPost(url,params,function(result){
+            $("#resultId").html(result);
+        });
+    }
+
+    function doAjax(){
+        var url="doAjax";
+        var params = "id=10&&title=AAA";
+        $.ajax({
+            type:"post",
+            url:url,
+            data:params,
+            dataType:"text",
+            async:true,
+            success:function(result) {
+                $("#resultId").html(result);
+        },
+            error:function(xhr){
+              console.log(xhr.statusText);
+              $("#resultId").html(xhr.statusText);
+            }
+        })
+    }
+
+    function doLoad(){
+        var url="doAjax";
+        var params = "id=10&&title=AAA";
+        $.ajax({
+            type:"post",
+            url:url,
+            data:params,
+            dataType:"text",
+            async:true,
+            success:function() {
+                $("#resultId").load(url,params);
+            },
+            error:function(){
+                $("#resultId").load(url,params);
+            }
+        })
+    }
+
+    function doAxios(){
+        axios.get("user?ID=12345")
+            .then(function (response) {
+                $("#resultId").html(response.data);
+            })
+            .catch(function (error) {
+                $("#resultId").html(error.data);
+            });
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org"
+    xmlns:sec="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>修改商品</h2>
+<hr/>
+<form action="/goods/updateById" method="POST">
+	<!-- hidden隐藏域,在提交表单时连door.id一起提交 -->
+	<input type="hidden" name="id" th:value="${list.id}"/>
+	<table border="1">
+		<tr >
+			<td width="30%">商品名称</td>
+			<td>
+				<input type="text" name="name" th:value="${list.name}"/>
+			</td>
+		</tr>
+		<tr>
+			<td>商品备注</td>
+			<td>
+				<textarea rows="3" cols="30" name="remark" th:text="${list.remark}"></textarea>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<input type="submit" value="提	交" />
+			</td>
+		</tr>
+	</table>
+</form>
+</body>
+</html>

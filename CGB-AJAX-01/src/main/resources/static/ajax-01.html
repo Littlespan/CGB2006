@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>The Ajax-01 Page</h1>
+	<fieldset>
+		<legend>Ajax 异步请求</legend>
+		<button onclick="doAjaxGet()">Ajax Get Request</button>
+		<span id="ResultId">The Data is Loading...</span>
+	</fieldset>
+	<script type="text/javascript">
+		function doAjaxGet() {
+			var xhr = new XMLHttpRequest();
+			xhr.onreadystatechange = function() {
+				if (xhr.readyState == 4 && xhr.status == 200) {
+					document.getElementById("ResultId").innerHTML = xhr.responseText;
+				}
+			};
+			xhr.open("get", "doAjaxGet", true);
+			xhr.send();
+		}
+	</script>
+</body>
+</html>

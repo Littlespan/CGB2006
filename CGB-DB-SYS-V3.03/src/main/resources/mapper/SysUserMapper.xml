@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cy.pj.sys.dao.SysUserDao">
+    <sql id="usernameId">
+        <where>
+            <if test="username!=null and username!=''">
+                username like concat("%",#{username},"%")
+            </if>
+        </where>
+    </sql>
+
+    <resultMap id="sysUserDept" type="com.cy.pj.common.vo.SysUserDeptVo">
+        <id property="id" column="id"/>
+        <association property="sysDept" column="deptId" select="com.cy.pj.sys.dao.SysDeptDao.findById">
+        </association>
+    </resultMap>
+
+    <select id="getRowCount" resultType="int">
+        select count(*) from sys_users
+        <include refid="usernameId"/>
+    </select>
+
+    <select id="findPageObjects" resultMap="sysUserDept">
+        select * from sys_users
+        <include refid="usernameId"/>
+        order by createdTime desc
+        limit #{startIndex},#{pageSize}
+    </select>
+
+    <update id="validById">
+        update sys_users set valid=#{valid},modifiedTime=now() where id=#{id}
+    </update>
+
+    <insert id="doSaveObject" useGeneratedKeys="true" keyProperty="id">
+        insert into sys_users (id,username,password,salt,email,mobile,createdTime,deptId,valid)
+        values(null,#{username},#{password},#{salt},#{email},#{mobile},now(),#{deptId},1)
+    </insert>
+
+    <select id="findPageObjectById" resultMap="sysUserDept">
+        select * from sys_users where id=#{id}
+    </select>
+
+    <update id="updateObject">
+        update sys_users set username=#{username},deptId=#{deptId},email=#{email},
+         mobile=#{mobile},modifiedTime=now() where id=#{id}
+    </update>
+
+    <select id="findUserByUserName" resultType="com.cy.pj.common.vo.SysUserDeptVo">
+        select * from sys_users where username = #{username}
+    </select>
+    
+    <update id="updatePassword">
+    	update sys_users set password=#{password},salt=#{salt},modifiedTime=now() where id = #{id}
+    </update>
+</mapper>

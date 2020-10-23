@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org"
+    xmlns:sec="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+  ul li {list-style-type:none}
+</style>
+</head>
+<body>
+   <h1>The Goods Add Page</h1>
+   <form th:action="@{doSaveGoods}" method="post">
+      <ul>
+        <li>name:<input type="text" name="name">
+        <li>remark:<textarea rows="3" cols="30" name="remark"></textarea>
+        <li><input type="submit" value="Save Goods">
+       </ul>
+   </form>
+</body>
+</html>

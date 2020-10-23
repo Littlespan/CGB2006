@@ -1,0 +1,17 @@
+1598600337505	Delete element
+1598600362588	Delete element
+1598600837782	Extract local variable 'list'
+1598602680372	Extract local variable 'conn'
+1598602832947	Extract local variable 'rs'
+1598602847214	Extract local variable 'rs'
+1598606629171	Delete element
+1598607768865	Rename compilation unit 'Mapper.java'
+1598608388499	Extract local variable 'rows'
+1598664188812	Rename package 'com.cy.pj.common.dao'
+1598664200379	Rename type 'GoodsMapper'
+1598665241548	Rename package 'com.cy.pj.common.jdbc'
+1598670498673	Rename package 'com.cy.pj.common.pojo'
+1598670535193	Rename type 'findAll'
+1598686279495	Move package
+1598687486049	Extract local variable 'list'
+1598687696203	Extract local variable 'list'

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org"
+    xmlns:sec="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<a href="/goods/goAdd">Add</a>
+	<table>
+		<thead>
+			<tr>
+				<th>id</th>
+				<th>name</th>
+				<th>remark</th>
+				<th>createdTime</th>
+				<th colspan="2">operation</th>
+			</tr>
+		</thead>
+		<tr th:each="g:${list}"> 
+			<td th:text="${g.id}"></td>
+			<td th:text="${g.name}"></td>
+			<td th:text="${g.remark}"></td>
+			<td th:text="${#dates.format(g.createdTime,'yyyy-MM-dd HH:mm:ss')}"></td>
+			<td><a th:href="@{deleteById/{id}(id=${g.id})}">删除</a></td>
+			<td><a th:href="@{goUpdateInfo/{id}(id=${g.id})}">修改</a></td>
+		</tr>
+	</table>
+</body>
+</html>

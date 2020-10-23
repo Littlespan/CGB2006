@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="/js/ajax.js"></script>
+</head>
+<body>
+	<h1>The Ajax-02 Page</h1>
+	<fieldset>
+		<legend>账号检测</legend>
+		<form>
+			<input type="text" name="name" id="nameId" onfocus="doClear()"
+				onblur="doCheck()"> <input type="button" onclick="doSave()"
+				value="save">
+		</form>
+		<span id="Result"></span>
+	</fieldset>
+	<script type="text/javascript">
+		function doCheck() {
+			var url="doCheck";
+			var name=document.forms[0].name.value;
+			var params=`name=${name}`;
+			Ajax.doAjaxGet(url,params,function(result){
+				document.getElementById("Result").innerHTML=`<font color=red>${result}</font>`;
+			});
+		}
+		
+		var doClear=()=> {
+			document.forms[0].name.value="";
+			document.getElementById("Result").innerHTML ="";
+		}
+		
+		function doSave() {
+			var url="/doSave";
+			var name=document.forms[0].name.value;
+			var params=`name=${name}`;
+			Ajax.doAjaxPost(url,params,function(result){
+				alert(result);
+			});
+		}
+	</script>
+</body>
+</html>

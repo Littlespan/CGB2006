@@ -1,0 +1,6 @@
+1598413148959	Delete element
+1598507906794	Extract local variable 'connection'
+1598507957448	Extract local variable 'prepareStatement'
+1598507996245	Extract local variable 'executeQuery'
+1598514684835	Extract local variable 'rows'
+1598515793657	Extract local variable 'deleteobjects'

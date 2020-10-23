@@ -1,0 +1,23 @@
+1599649122102	Delete element
+1599649204386	Delete elements
+1599649554686	Delete element
+1599651990757	Extract local variable 'list'
+1599652459099	Extract local variable 'findAll'
+1599652696417	Extract local variable 'findAll'
+1599653175967	Rename package 'com.cy.pj.sys.common.exception'
+1599654287882	Extract local variable 'findAll'
+1599701478993	Delete element
+1599701482872	Delete element
+1599704177864	Extract local variable 'rows'
+1599704212224	Extract local variable 'result'
+1599704920456	Delete element
+1599705210723	Delete element
+1599705214194	Delete element
+1599707262338	Extract local variable 'list'
+1599709925485	Extract local variable 'rows'
+1599719950505	Rename type 'DaoTest'
+1599719957412	Rename type 'ServiceTest'
+1599720030198	Extract local variable 'list'
+1599722547503	Extract local variable 'rows'
+1599724918323	Extract local variable 'list'
+1599897032631	Delete element

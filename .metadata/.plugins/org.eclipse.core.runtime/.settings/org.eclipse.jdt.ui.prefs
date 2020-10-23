@@ -1,0 +1,9 @@
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="com.cy.pj.common.pojo.PageObject"><rhs name\="com.cy.pj.common.pojo.PageObject"/></lhs><lhs name\="com.cy.pj.common.vo.JsonResult"><rhs name\="com.cy.pj.common.vo.JsonResult"/></lhs><lhs name\="com.cy.pj.common.vo.SysUserDeptVo"><rhs name\="com.cy.pj.common.vo.SysUserDeptVo"/></lhs><lhs name\="org.springframework.mail.MailMessage"><rhs name\="org.springframework.mail.SimpleMailMessage"/></lhs><lhs name\="org.springframework.mail.SimpleMailMessage"><rhs name\="org.springframework.mail.SimpleMailMessage"/></lhs></history>
+content_assist_number_of_computers=15
+eclipse.preferences.version=1
+org.eclipse.jdt.internal.ui.navigator.layout=1
+org.eclipse.jdt.internal.ui.navigator.librariesnode=true
+org.eclipse.jdt.ui.formatterprofiles.version=19
+spelling_locale_initialized=true
+useAnnotationsPrefPage=true
+useQuickDiffPrefPage=true

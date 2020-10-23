@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cy.pj.sys.dao.SysRoleDao">
+    <sql id="nameLike">
+        <where>
+            <if test="name!=null and name!=''">
+                name like concat("%",#{name},"%")
+            </if>
+        </where>
+    </sql>
+    <select id="getRowCount" resultType="int">
+        select count(*) from sys_roles
+        <include refid="nameLike"></include>
+    </select>
+    <select id="findPageObjects" resultType="com.cy.pj.sys.pojo.SysRole">
+        select * from sys_roles
+        <include refid="nameLike"></include>
+        order by createdTime desc
+        limit #{startIndex},#{pageSize}
+    </select>
+    <insert id="insertObject" useGeneratedKeys="true" keyProperty="id">
+        insert into sys_roles (id,name,note,createdTime) values(null,#{name},#{note},now())
+    </insert>
+    <delete id="deleteObject">
+        delete from sys_roles where id=#{id}
+    </delete>
+    <select id="findObjectById" resultType="com.cy.pj.common.vo.RoleMenu">
+        select id,name,note from sys_roles where id=#{id};
+    </select>
+    <update id="updateObject">
+         update sys_roles
+         set
+           name=#{name},
+           note=#{note},
+           modifiedUser=#{modifiedUser},
+           modifiedTime=now()
+        where id=#{id}
+    </update>
+    <select id="doFindRoles" resultType="com.cy.pj.sys.pojo.checkBox">
+        select id,name from sys_roles
+    </select>
+</mapper>
