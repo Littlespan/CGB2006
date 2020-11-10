@@ -11,8 +11,7 @@ import com.aliyuncs.profile.DefaultProfile;
 
 public class MessageUtils {
 	public static void SendMessage(Throwable t) {
-		DefaultProfile profile = DefaultProfile.getProfile("cn-hangzhou", "LTAI4G2MMBgtcYn15qaJCiE1", "W3TedlbDHxLCJpYUpj4GdRYg7cWXjr");
-		IAcsClient client = new DefaultAcsClient(profile);
+		DefaultProfile profile = DefaultProfile.getProfile("cn-hangzhou", "", "");
 
 		CommonRequest request = new CommonRequest();
 		request.setSysMethod(MethodType.POST);
@@ -20,9 +19,9 @@ public class MessageUtils {
 		request.setSysVersion("2017-05-25");
 		request.setSysAction("SendSms");
 		request.putQueryParameter("RegionId", "cn-hangzhou");
-		request.putQueryParameter("PhoneNumbers", "15205698133");
+		request.putQueryParameter("PhoneNumbers", "phone");
 		request.putQueryParameter("SignName", "ABC商城");
-		request.putQueryParameter("TemplateCode", "SMS_202812794");
+		request.putQueryParameter("TemplateCode", "value");
 		request.putQueryParameter("TemplateParam", "{\"code\":\"" + t.getMessage()+"\"}");
 		try {
 			CommonResponse response = client.getCommonResponse(request);
