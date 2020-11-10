@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1db5ad03-7676-477b-b9b0-d9c9621cb064" name="Default Changelist" comment="" />
+    <list default="true" id="1db5ad03-7676-477b-b9b0-d9c9621cb064" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CGB-DB-SYS-V3.03/src/main/java/com/cy/pj/common/config/SpringShiroConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/CGB-DB-SYS-V3.03/src/main/java/com/cy/pj/common/config/SpringShiroConfig.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,6 +31,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -49,6 +55,7 @@
     <option name="jreName" value="1.8" />
   </component>
   <component name="ProjectId" id="1h5NIZJMDSpvKqbgtWZCMH8uxM6" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -58,7 +65,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../TCGBVI" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.2841797" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -124,11 +131,27 @@
       <workItem from="1599438881065" duration="33000" />
       <workItem from="1599438995383" duration="812000" />
       <workItem from="1600824146660" duration="768000" />
+      <workItem from="1604712978252" duration="97000" />
+      <workItem from="1604713119290" duration="867000" />
+      <workItem from="1604881884570" duration="690000" />
+      <workItem from="1604979965794" duration="234000" />
     </task>
+    <task id="LOCAL-00001" summary="undefine">
+      <created>1604980128411</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1604980128411</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="undefine" />
+    <option name="LAST_COMMIT_MESSAGE" value="undefine" />
   </component>
   <component name="WindowStateProjectService">
     <state x="265" y="175" key="#Project_Structure" timestamp="1599439528831">
@@ -147,6 +170,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="403" y="271" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599439425741" />
+    <state x="532" y="109" key="CommitChangelistDialog2" timestamp="1605007931891">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="532" y="109" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1605007931891" />
     <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1599439810759">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -159,5 +186,13 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="240" y="106" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1600824249320" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1604980197680">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1604980197680" />
+    <state x="752" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604980080591">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="752" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1604980080591" />
   </component>
 </project>

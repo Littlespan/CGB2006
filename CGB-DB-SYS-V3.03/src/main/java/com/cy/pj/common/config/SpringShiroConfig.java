@@ -1,5 +1,6 @@
 package com.cy.pj.common.config;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.apache.shiro.cache.CacheManager;
